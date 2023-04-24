@@ -1,0 +1,49 @@
+@mixin display-center()
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin display-items()
+    display: flex
+    align-items: center
+
+@mixin botoes()
+    content: ''
+    position: absolute
+    border-radius: 8px
+    width: 130px
+    height: 40px
+    border: 1.5px solid $cordestaque
+
+@mixin acao-imput()
+    #lbN
+        width: 60px
+        transform: translate(50px, 15px)    
+    .nome:focus ~ #lbN,
+    .nome:valid ~ #lbN
+        transition: 400ms
+        transform: translate(45px, -3px) scale(0.7)
+
+    #lbI
+        width: 60px
+        transform: translate(48px, 15px)
+    .idade:focus ~ #lbI,
+    .idade:valid ~ #lbI
+        transition: 400ms
+        transform: translate(45px, -3px) scale(0.7) 
+    
+    #lbG
+        width: 70px
+        transform: translate(54px, 15px)
+    .genero:focus ~ #lbG,
+    .genero:valid ~ #lbG
+        transition: 400ms
+        transform: translate(40px, -3px) scale(0.7)
+
+    #lbT
+        width: 110px
+        transform: translate(55px, 15px)
+    .temp:focus ~ #lbT,
+    .temp:valid ~ #lbT
+        transition: 400ms
+        transform: translate(40px, -3px) scale(0.7)
